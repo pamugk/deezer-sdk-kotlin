@@ -1,10 +1,10 @@
-package api.objects.service
+package api.`object`.service
 
 import kotlinx.serialization.Serializable
 
 @Serializable
 data class Offer(
-    val id: Long, val type: String,
+    val id: Long,
     val name: String,
     val amount: Float,
     val currency: String,

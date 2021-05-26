@@ -1,4 +1,4 @@
-package api.objects.search
+package api.`object`.search
 
 import kotlinx.serialization.Serializable
 
