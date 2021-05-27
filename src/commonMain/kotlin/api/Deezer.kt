@@ -14,7 +14,9 @@ import api.`object`.user.Folder
 import io.ktor.client.*
 import io.ktor.client.features.json.*
 import io.ktor.client.request.*
+import kotlinx.serialization.ExperimentalSerializationApi
 
+@ExperimentalSerializationApi
 class Deezer {
     private companion object {
         const val API_LINK = "https://api.deezer.com"
@@ -154,7 +156,7 @@ class Deezer {
      * This method returns the new releases per genre for the current country
      */
     suspend fun getEditorialReleases(id: Long, index: Int? = null, limit: Int?): PartialSearchResponse<Album> =
-        getPartial("$API_LINK/$CHART/$id/releases")
+        getPartial("$API_LINK/$CHART/$id/releases", index, limit)
 
     suspend fun getGenre(id: Long): Genre = httpClient.get("$API_LINK/$GENRE/$id")
 
@@ -209,7 +211,7 @@ class Deezer {
     /**
      * Get first 40 tracks in the radio
      */
-    suspend fun getRadioTracks(id: Long): SearchResponse<Track> = httpClient.get("$API_LINK/$RADIO/$TRACKS")
+    suspend fun getRadioTracks(id: Long): SearchResponse<Track> = httpClient.get("$API_LINK/$RADIO/$id/$TRACKS")
 
     /**
      * Returns a list of personal radio splitted by genre (as MIX in website)

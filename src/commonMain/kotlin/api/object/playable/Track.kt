@@ -1,14 +1,16 @@
 package api.`object`.playable
 
 import kotlinx.datetime.LocalDate
+import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 /**
  * A track object
  */
+@ExperimentalSerializationApi
 @Serializable
-data class Track(
+data class Track constructor(
     /**
      * The track's Deezer id
      */

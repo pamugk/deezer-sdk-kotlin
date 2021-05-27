@@ -6,12 +6,14 @@ import api.`object`.util.mediumPicture
 import api.`object`.util.smallPicture
 import api.`object`.util.xlPicture
 import kotlinx.datetime.LocalDate
+import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 /**
  *  An album object
  */
+@ExperimentalSerializationApi
 @Serializable
 data class Album(
     /**

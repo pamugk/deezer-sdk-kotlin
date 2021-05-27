@@ -6,12 +6,14 @@ import api.`object`.util.bigPicture
 import api.`object`.util.mediumPicture
 import api.`object`.util.smallPicture
 import api.`object`.util.xlPicture
+import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 /**
  * A playlist object
  */
+@ExperimentalSerializationApi
 @Serializable
 data class Playlist(
     /**

@@ -2,11 +2,13 @@ package api.`object`.compilation
 
 import api.`object`.playable.*
 import api.`object`.search.SearchResponse
+import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.Serializable
 
 /**
  * Charts of a specified genre
  */
+@ExperimentalSerializationApi
 @Serializable
 data class Chart(
     /**

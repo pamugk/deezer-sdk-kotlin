@@ -1,11 +1,12 @@
 plugins {
     kotlin("multiplatform") version "1.5.10"
     kotlin("plugin.serialization") version "1.5.10"
+    id("maven-publish")
 }
 
 group = "ru.psu"
-version = "1.0-SNAPSHOT"
-val ktor_version = "1.5.4"
+version = "ktorVersion"
+val ktorVersion = "1.5.4"
 
 repositories {
     mavenCentral()
@@ -37,23 +38,23 @@ kotlin {
             dependencies {
                 implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.2.0")
 
-                implementation("io.ktor:ktor-client-serialization:$ktor_version")
-                implementation("io.ktor:ktor-client-core:$ktor_version")
+                implementation("io.ktor:ktor-client-serialization:$ktorVersion")
+                implementation("io.ktor:ktor-client-core:$ktorVersion")
             }
         }
         val jvmMain by getting {
             dependencies {
-                implementation("io.ktor:ktor-client-java:$ktor_version")
+                implementation("io.ktor:ktor-client-java:$ktorVersion")
             }
         }
         val jsMain by getting {
             dependencies {
-                implementation("io.ktor:ktor-client-js:$ktor_version")
+                implementation("io.ktor:ktor-client-js:$ktorVersion")
             }
         }
         val nativeMain by getting {
             dependencies {
-                implementation("io.ktor:ktor-client-curl:$ktor_version")
+                implementation("io.ktor:ktor-client-curl:$ktorVersion")
             }
         }
     }
