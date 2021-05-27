@@ -1,6 +1,6 @@
 package api.`object`.playable
 
-import api.`object`.User
+import api.`object`.user.User
 import api.`object`.search.SearchResponse
 import api.`object`.util.bigPicture
 import api.`object`.util.mediumPicture

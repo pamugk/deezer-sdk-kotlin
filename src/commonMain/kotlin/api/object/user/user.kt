@@ -1,4 +1,4 @@
-package api.`object`
+package api.`object`.user
 
 import api.`object`.util.bigPicture
 import api.`object`.util.mediumPicture

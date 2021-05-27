@@ -28,5 +28,5 @@ data class Chart(
     /**
      * List of podcast
      */
-    val podcasts: SearchResponse<Podcast>
+    val podcasts: SearchResponse<Podcast>? = null
 )
